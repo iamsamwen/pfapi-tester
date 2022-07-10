@@ -1,11 +1,12 @@
 {
   "name": "pfapi-tester",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a command line tester for strapi-plugin pfapi",
   "bin": {
-    "pfapi-tester": "node ./index.js"
+    "pfapi-tester": "./bin/pfapi-tester.js"
   },
   "directories": {
+    "bin": "./bin",
     "lib": "./lib"
   },
   "main": "index.js",
