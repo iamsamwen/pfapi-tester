@@ -30,28 +30,27 @@ Options:
   -h, --help            display help for command
 
 
-> pfapi-tester -p /pfapi/pf/northern-cities -t 10
+> pfapi-tester -p /pfapi/pf/northern-cities -t 10 -l
 
 ++++++++++
 {
   times: 10,
   path: '/pfapi/pf/northern-cities',
-  base_url: '...'
+  legend: true,
+  base_url: 'https://api.doitincloud.com'
 }
-{
-  total: 10,
-  not_ok_count: 0,
-  ok_count: 10,
-  ave_p_response_time: 1.79,
-  ave_x_response_time: 2.83,
-  ave_total_time: 131.49,
-  min_p_response_time: 0.85,
-  min_x_response_time: 1.76,
-  min_total_time: 112.38,
-  max_p_response_time: 7.11,
-  max_x_response_time: 8.41,
-  max_total_time: 227.87
-}
+total: 10 ok: 10 not_ok: 0
+------------------------------
+   	pfapi	http	total
+------------------------------
+ave	1.23	2.49	123.58
+min	0.94	1.70	98.39
+max	3.23	4.15	176.72
+------------------------------
+all values are in milliseconds.
+pfapi: time used by pfapi.
+http: time used by http server.
+total: round-trip delay + http.
 ```
 
 **p_response_time**: pfapi response time in ms.
